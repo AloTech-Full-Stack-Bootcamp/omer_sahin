@@ -1,7 +1,7 @@
 const fs= require('fs');
 //mkdir
 fs.mkdir('ödev', ()=> {
-  console.log('Klasör başarıyla oluşturuldu.');
+  console.log('Klasör oluşturuldu.');
 });
 // write
 fs.writeFile('./ödev/employees.json', '{"name": "Employee 1 Name", "salary": 2000}', 'utf8', (err)=> {
