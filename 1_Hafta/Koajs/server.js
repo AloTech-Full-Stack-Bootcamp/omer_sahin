@@ -14,14 +14,14 @@ app.use(logger((str) => {
 app.use(router.routes()).use(router.allowedMethods());
 //Router
 router.get("index", "/", (context) => {
-  context.body = `<h1>İndex sayfasına hoşgeldiniz</h1>`;
+  context.body = `<h1>Welcome to the index page</h1>`;
 });
 router.get("about", "/About", (context) => {
-  context.body = "<h1>About sayfasına hoşgeldiniz</h1>";
+  context.body = "<h1>Welcome to the about page</h1>";
 });
 router.get("contact", "/Contact", (context) => {
-  context.body = "<h1>Contact sayfasına hoşgeldiniz</h1>";
+  context.body = "<h1>Welcome to the contact page</h1>";
 });
 
 const port = 3000;
-app.listen(port, () => console.log(`Sunucu ${port} portunda başlatıldı.`));
+app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
