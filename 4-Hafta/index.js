@@ -60,7 +60,14 @@ export function SeriesTracker(series) {
     this.finishSerie = function () {
       this.series.forEach((serie) => {
         if (serie === this.currentSerie) {
-      ;
+          let date = new Date();
+          let day = String(date.getDate())
+          let month = String(date.getMonth())
+          let year = date.getFullYear();
+          serie.isCurrent = true;
+          serie.isWatched = false;
+          serie.finishedDate = `${day}.${month}.${year}`;
+          this.lastSerie = serie;
           this.lastSerie = serie;
          
         }
@@ -75,6 +82,8 @@ export function SeriesTracker(series) {
           }
         }
       });
+      this.numberOfWatched += 1;
+      this.numberOfUnWatched -= 1;
 
       // set new nextSerie value with the next one which has not been watched.
       // update "numberOfWatched" and "numberOfUnWatched" props
