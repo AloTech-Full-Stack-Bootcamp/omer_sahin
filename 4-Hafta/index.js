@@ -60,13 +60,7 @@ export function SeriesTracker(series) {
     this.finishSerie = function () {
       this.series.forEach((serie) => {
         if (serie === this.currentSerie) {
-          let date = new Date();
-          let day = String(date.getDate())
-          let month = String(date.getMonth())
-          let year = date.getFullYear();
-          serie.isCurrent = true;
-          serie.isWatched = false;
-          serie.finishedDate = `${day}.${month}.${year}`;
+      ;
           this.lastSerie = serie;
          
         }
