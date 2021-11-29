@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-![app link](https://react-todolist-omerfs.herokuapp.com/).
+##(https://react-todolist-omerfs.herokuapp.com/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
