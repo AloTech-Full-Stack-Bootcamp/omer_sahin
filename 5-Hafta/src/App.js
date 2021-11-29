@@ -5,7 +5,7 @@ function App() {
   let initialStater=[
     {
       id:1,
-      txt:"Learn JavaScript",
+      txt:"Learn Node js",
       complete:false,
     }, 
     {
@@ -32,8 +32,8 @@ function App() {
   // Listeye eleman ekleme
   const handlechange= (e)=>{
      
-     if (e.key ==="Enter"  )
-      { if (newlist=== "" || newlist.replace(/\s/g,"").length==0)
+     if (e.key === "Enter"  )
+      { if (newlist === "" || newlist.replace(/\s/g,"").length === 0)
           {alert("listeye boşluk eklenemez!!") }
       else {
           setlist([...list ,{id:Date.now(),txt:newlist,complete:false,}])}
@@ -80,13 +80,13 @@ function App() {
           </span>
             <ul className="filters">
               <li>
-                <a onClick={()=> setviewlist({active:false,completed:false,allcomplete:true})}>All </a>
+                <button  onClick={()=> setviewlist({active:false,completed:false,allcomplete:true})}>All </button  >
               </li>
               <li>
-                <a onClick={()=>setviewlist({active:true,completed:false,allcomplete:false})}>Active</a>
+                <button   onClick={()=>setviewlist({active:true,completed:false,allcomplete:false})}>Active</button >
               </li>
               <li>
-                <a onClick={()=>setviewlist({active:false,completed:true,allcomplete:false}) }>Completed</a>
+                <button   onClick={()=>setviewlist({active:false,completed:true,allcomplete:false}) }>Completed</button >
               </li>
             </ul>
           {list.filter(elmn => elmn.complete===true ).length >0 ? 
